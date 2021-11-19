@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            javascript
+        </title>
+        <style>
+        </style>
+    </head>
+    <body>
+
+    <input type='text' name='test2' id='test2' placeholder='텍스트를 입력하세요' /> <br />
+    <p id='pppp2'></p>
+       <button id="btn1">빨강</button>
+       <button id="btn2">파랑</button>
+       <button id="btn3">초록</button>
+    </body>
+
+    <script>
+
+        document.getElementById('test2').addEventListener('keyup', function num(){
+            let result = document.getElementById('test2').value;
+            
+            if (result == '') {
+                alert('텍스트값을 입력해주세요');
+                
+                }
+                 else {
+                    document.getElementById('pppp2').innerHTML = result;
+                    document.getElementById("btn1").addEventListener("click", function () {
+
+                input();
+            });
+                }
+        });
+
+    </script>
+
+</html>

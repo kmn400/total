@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>total</title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <script>
+            
+           var ba = document.getElementById('btn');
+            ba.addEventListener('click', function(){
+                num();
+                });
+                function num()
+                {
+                let a = prompt('칸 수를 입력해주세요'); // prompt 입력
+                let b = prompt('줄 수를 입력해주세요');
+                var anum = parseInt(a); //형변환
+                let bnum = parseInt(b);
+                if (isNaN(a) == false || anum >= 0 || isNaN(b) == false || bnum >= 0) {
+                    //검사
+                    document.getElementById("demo").innerHTML = anum;
+                    //추출된 값을 함수로 넘기는 과정??
+                }
+                 else {
+                num();
+            }
+        }
+        </script>
+    </body>
+    <script>
+        const rowCnt = 5;
+        const columnCnt = 2;
+
+    document.write('<table border="1">');
+    for (let i = 0; i < rowCnt; i++) {
+        document.write('<tr>');
+        for (let j = 0; j < columnCnt; j++)  {
+        document.write('<td>');
+        document.write('</td>');
+        }
+        document.write('</tr>')
+    }
+    document.write('</table>');
+    </script>
+</html>

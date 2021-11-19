@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>total</title>
+        <style>
+            div{
+                width: 300px;
+                height: 100px;
+                border: #000000 1px solid ;
+            }
+            #div1{
+                position: absolute;
+                width: 200px;
+                height: 50px;
+            }
+            #div2{
+                position:absolute;
+                width: 50px;
+                height: 200px;
+                left: 210px;
+            }
+            #div3{
+                position:absolute;
+                width: 50px;
+                height: 200px;
+                top: 60px;
+            }
+            #div4{
+                position:absolute;
+                width: 200px;
+                height: 50px;
+                left: 60px;
+                top: 210px;
+            }
+            #img{
+                position:absolute;
+                left: 500px;
+                top: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <p id="domo"></p>
+        <button id='btn'>테이블</button>
+        <script>
+            var ba = document.getElementById('btn');
+            ba.addEventListener('click', function(){
+                num();
+                });
+                function num()
+                {
+                let a = prompt('칸 수를 입력해주세요');
+                let b = prompt('줄 수를 입력해주세요');
+                var anum = parseInt(a);
+                let bnum = parseInt(b);
+                if (isNaN(a) == false && anum >= 0) {
+                    var a1 = document.demo["anum[]"][1].value;
+                    document.getElementById("demo").innerHTML = a1;
+                }
+                 else {
+                num();
+                }
+                if (isNaN(b) == false && bnum >= 0) {
+                    document.getElementById("domo").innerHTML = bnum;
+                }
+                 else {
+                num();
+            }
+        }
+        </script>
+    </body>
+    <script>
+        document.write(`
+            <div id="div1">1</div>
+            <div id="div2">2</div>
+            <div id="div3">4</div>
+            <div id="div4">3</div>
+            <img src="몬드리안.jpg"
+            height="200" width="200"/>`)
+    </script>
+</html>
